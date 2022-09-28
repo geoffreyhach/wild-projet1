@@ -26,7 +26,7 @@ body {
 }
 
 .card{
-background-color: limegreen;
+background-color: var(--color-secondary);
 max-width: min(70vw,600px);
 border-radius: 25px;
 overflow: hidden;
