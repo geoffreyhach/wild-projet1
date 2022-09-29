@@ -113,14 +113,14 @@ section{
     margin-bottom: 1.3rem;
 }
 
-.main--homepage quote {
+.main--homepage .quote {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     padding-top: 2rem;
 }
 
-.main--homepage quote span {
+.main--homepage .quote span {
     text-decoration: underline
 }
 
@@ -146,27 +146,22 @@ section{
 .main--homepage button {
     position: relative;
     font-size: 1rem;
-    background-color: transparent;
-    border: none;
+    background-color: var(--color-primary);
+    padding: .8em 1em;
+    border : 5px solid var(--color-white);
+    margin-top: 1rem;
     padding: 1rem;
     text-transform: uppercase;
     color : var(--color-white);
     transform: skew(-20deg);
+    font-weight: 800;
+    white-space: nowrap;
     cursor: pointer;
 }
 
-.main--homepage button a {
-    display: block;
-    background-color: var(--color-primary);
-    padding: .8em 1em;
-    /* transform: skew(20deg); */
-    font-weight: 800;
-    border : 5px solid var(--color-white);
-    white-space: nowrap;
-}
 
-.main--homepage button a:hover {
-    transform: translateY(-5px);
+.main--homepage button:hover {
+    transform: translateY(-5px) skew(-20deg);
     box-shadow: 0 15px 10px  -10px gray;
 }
 
@@ -206,7 +201,7 @@ section{
         font-size: 2rem;
     }
 
-    .main--homepage quote {
+    .main--homepage .quote {
         margin-inline: 1rem;
     }
 }
