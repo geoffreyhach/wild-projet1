@@ -57,20 +57,17 @@ nav {
     font-size: 2rem;
     border-radius: 25px 0 0 25px;
     z-index: 1000;
-    /* transform: translateX(100%);
-    transition: 300ms transform ease-in; */
 }
 
 .active{
     display: flex;
-    /* transform: translateX(0%); */
 }
 
 
 nav a {
     text-decoration: none;
     color:var(--color-white);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; 
     font-weight: 800;
 }
 
@@ -96,24 +93,81 @@ section{
 
 .main--homepage {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap : 2rem;
+    padding : 4rem;
+
+}
+
+.main--homepage p {
+    position:  relative;
+    font-weight: 200;
+    text-align: justify;
+    text-indent: 3rem;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--color-white);
+    margin-bottom: 1.3rem;
+}
+
+.main--homepage quote {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 2rem;
+}
+
+.main--homepage quote span {
+    text-decoration: underline
+}
+
+.main--homepage p:before {
+    position: absolute;
+    content : '“';
+    top: 25px;
+    font-size: 8rem;
+    text-indent: -3rem;
+    line-height: 1rem;
+    font-weight: 300;
+}
+.main--homepage p:after {
+    position: absolute;
+    content : '”';
+    bottom: -40px;
+    font-size: 8rem;
+    text-indent: 10px;
+    line-height: 0rem;
+    font-weight: 300;
 }
 
 .main--homepage button {
     position: relative;
-    font-size: 1.4rem;
+    font-size: 1rem;
     background-color: transparent;
     border: none;
     padding: 1rem;
     text-transform: uppercase;
     color : var(--color-white);
+    transform: skew(-20deg);
     cursor: pointer;
 }
 
 .main--homepage button a {
+    display: block;
     background-color: var(--color-primary);
-    padding: .8rem 1rem;
+    padding: .8em 1em;
+    /* transform: skew(20deg); */
+    font-weight: 800;
+    border : 5px solid var(--color-white);
+    white-space: nowrap;
+}
+
+.main--homepage button a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 10px  -10px gray;
 }
 
 
@@ -128,7 +182,7 @@ section{
         grid-template-areas: 
             "img main"
             "nav main";
-        min-height: 70vh;
+        min-height: 60vh;
     }
     nav {
         display: flex;
@@ -146,5 +200,13 @@ section{
     }
     .navbartoggle{
         display: none;
+    }
+
+    .main--homepage button {
+        font-size: 2rem;
+    }
+
+    .main--homepage quote {
+        margin-inline: 1rem;
     }
 }
