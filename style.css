@@ -26,10 +26,10 @@ body {
 }
 
 .card{
-    background-color: var(--color-secondary);
-    max-width: min(70vw,900px);
-    border-radius: 25px;
-    overflow: hidden;
+background-color: var(--color-secondary);
+max-width: min(70vw,600px);
+border-radius: 25px;
+overflow: hidden;
 }
 
 .card >*:not(:first-child){
@@ -66,6 +66,12 @@ nav {
     /* transform: translateX(0%); */
 }
 
+.navbartoggle{
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    z-index: 10001;
+}
 
 nav a {
     text-decoration: none;
@@ -74,80 +80,25 @@ nav a {
     font-weight: 800;
 }
 
-.navbartoggle{
-    top: 10px;
-    right: 10px;
-    position: absolute;
-    z-index: 10001;
-}
-
 main {
     grid-area: main;
 }
-
 
 section{
     margin-bottom: 1rem;
 }
 
-/* ================
-    PAGE SPECIFIC
-================= */
-
-.main--homepage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.main--homepage button {
-    position: relative;
-    font-size: 1.4rem;
-    background-color: transparent;
-    border: none;
-    padding: 1rem;
-    text-transform: uppercase;
-    color : var(--color-white);
-    cursor: pointer;
-}
-
-.main--homepage button a {
-    background-color: var(--color-primary);
-    padding: .8rem 1rem;
-}
-
-/* ================
-    FORMATION PAGE
-================= */
-
-.body--formationpage {
-    background-image: url("assets/fondvintage2.jpg");
-    background-repeat:no-repeat;
-    background-size: cover;
-}
-
-.main--formationpage section h2{
-    padding: 0.5rem;
-    text-shadow: var(--color-black) 0.1em 0.1em;
-}
-
-.main--formationpage section p {
-    padding:2px;
-    font-style: italic;
-}
-
 @media screen and (min-width:35em){
     body{
-        align-items: center;
-    }
+        align-items: center;}
     .card{
         display: grid;
         grid-template-columns: 2fr 3fr;
-        grid-template-rows:300px 1fr;
+        grid-template-rows: 150px;
         grid-template-areas: 
             "img main"
             "nav main";
-        min-height: 60vh;
+        min-height: 50vh;
     }
     nav {
         display: flex;
@@ -164,6 +115,6 @@ section{
         transform: translateX(0%);
     }
     .navbartoggle{
-        display: none;
+        display:none;
     }
 }
