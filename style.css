@@ -116,6 +116,25 @@ section{
     padding: .8rem 1rem;
 }
 
+/* ================
+    FORMATION PAGE
+================= */
+
+.body--formationpage {
+    background-image: url("assets/fondvintage2.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+.main--formationpage section h2{
+    padding: 0.5rem;
+    text-shadow: var(--color-black) 0.1em 0.1em;
+}
+
+.main--formationpage section p {
+    padding:2px;
+    font-style: italic;
+}
 
 @media screen and (min-width:35em){
     body{
@@ -128,7 +147,7 @@ section{
         grid-template-areas: 
             "img main"
             "nav main";
-        min-height: 70vh;
+        min-height: 60vh;
     }
     nav {
         display: flex;
