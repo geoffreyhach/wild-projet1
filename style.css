@@ -138,9 +138,6 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
-
-
 }
 
 @media screen and (min-width:35em) {
@@ -175,5 +172,13 @@ section {
 
     .navbartoggle {
         display: none;
+    }
+
+    .text--experience {
+        min-height: 80vh;
+    }
+
+    .ul--experience {
+        min-height: 80vh;
     }
 }
