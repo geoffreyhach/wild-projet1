@@ -187,6 +187,7 @@ section {
     font-style: italic;
 }
 
+
 /* Yann experience page*/
 
 .main--experience {
@@ -254,4 +255,41 @@ section {
     .main--homepage .quote {
         margin-inline: 1rem;
     }
+
+    /* Formation Page */
+
+/* Placement Main page Formation*/
+
+.main--formationpage{
+    padding-top: 125px !important;
+}
+
+    /*scroll bar*/
+
+.main--formationpage {
+    width: auto;
+    max-height: 50vh;
+    overflow-y: scroll;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #ff6201 #f3b720;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #f3b720;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ff6201;
+    border-radius: 25px;
+    border: 12px solid #ff6201;
+  }
 }
