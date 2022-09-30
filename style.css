@@ -43,24 +43,26 @@ img {
 
 nav {
     grid-area: nav;
-    position: absolute;
-    display: none;
+    position: fixed;
+    display: flex;
     flex-direction: column;
     gap: 2rem;
     padding-top: 5rem;
     min-width: 70vw;
     top: 0;
     right: 0;
-    background-color: red;
+    background-color: #990000;
     opacity: 0.7;
     min-height: 100vh;
     font-size: 2rem;
     border-radius: 25px 0 0 25px;
+    transform: translateX(100%);
+    transition: 300ms transform ease-in-out;
     z-index: 1000;
 }
 
 .active {
-    display: flex;
+    transform: translateX(0);
 }
 
 
@@ -98,13 +100,13 @@ section {
     align-items: center;
     text-align: center;
     flex-direction: column;
-    gap : 2rem;
-    padding : 4rem;
+    gap: 2rem;
+    padding: 4rem;
 
 }
 
 .main--homepage p {
-    position:  relative;
+    position: relative;
     font-weight: 200;
     text-align: justify;
     text-indent: 3rem;
@@ -127,16 +129,17 @@ section {
 
 .main--homepage p:before {
     position: absolute;
-    content : '“';
+    content: '“';
     top: 25px;
     font-size: 8rem;
     text-indent: -3rem;
     line-height: 1rem;
     font-weight: 300;
 }
+
 .main--homepage p:after {
     position: absolute;
-    content : '”';
+    content: '”';
     bottom: -40px;
     font-size: 8rem;
     text-indent: 10px;
@@ -149,11 +152,11 @@ section {
     font-size: 1rem;
     background-color: var(--color-primary);
     padding: .8em 1em;
-    border : 5px solid var(--color-white);
+    border: 5px solid var(--color-white);
     margin-top: 1rem;
     padding: 1rem;
     text-transform: uppercase;
-    color : var(--color-white);
+    color: var(--color-white);
     transform: skew(-20deg);
     font-weight: 800;
     white-space: nowrap;
@@ -163,9 +166,24 @@ section {
 
 .main--homepage button:hover {
     transform: translateY(-5px) skew(-20deg);
-    box-shadow: 0 15px 10px  -10px gray;
+    box-shadow: 0 15px 10px -10px gray;
 }
 
+/*Hobbie Page*/
+
+.body--hobbie {
+    background-image: linear-gradient(to right top, #f4dc43, #f8c82c, #fbb316, #fe9d02, #ff8500, #f77300, #ef6100, #e64d03, #d33d03, #c02c03, #ac1a02, #990000);
+}
+
+.main--hobbie h2 {
+    border: 10px inset #FF6201;
+    border-radius: 11px;
+
+}
+
+audio {
+    visibility: hidden;
+}
 
 /* ================
     FORMATION PAGE
@@ -173,17 +191,17 @@ section {
 
 .body--formationpage {
     background-image: url("assets/fondvintage2.jpg");
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
-.main--formationpage section h2{
+.main--formationpage section h2 {
     padding: 0.5rem;
     text-shadow: var(--color-black) 0.1em 0.1em;
 }
 
 .main--formationpage section p {
-    padding:2px;
+    padding: 2px;
     font-style: italic;
 }
 
@@ -199,8 +217,16 @@ section {
         "text ulnav";
 }
 
+.body--experience {
+    background-image: url("assets/fond-experience.jpg");
+}
+
 .text--experience {
     grid-area: text;
+    max-height: 60vh;
+    overflow: scroll;
+    margin-right: 20px;
+    font-size: 0.8rem;
 }
 
 .ul--experience {
@@ -209,9 +235,6 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
-
-
 }
 
 @media screen and (min-width:35em) {
@@ -222,8 +245,8 @@ section {
     .card {
         display: grid;
         grid-template-columns: 2fr 3fr;
-        grid-template-rows:300px 1fr;
-        grid-template-areas: 
+        grid-template-rows: 300px 1fr;
+        grid-template-areas:
             "img main"
             "nav main";
         min-height: 60vh;
@@ -247,6 +270,21 @@ section {
     .navbartoggle {
         display: none;
     }
+
+    .text--experience {
+        min-height: 55vh;
+        text-align: justify;
+        margin-right: 20px;
+        overflow: scroll;
+        max-height: 5vh;
+
+    }
+
+    .ul--experience {
+        min-height: 55vh;
+    }
+
+
 
     .main--homepage button {
         font-size: 2rem;
