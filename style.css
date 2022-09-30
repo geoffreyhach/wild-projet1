@@ -208,9 +208,6 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
-
-
 }
 
 @media screen and (min-width:35em) {
@@ -247,6 +244,12 @@ section {
         display: none;
     }
 
+    .text--experience {
+        min-height: 80vh;
+    }
+
+    .ul--experience {
+        min-height: 80vh;
     .main--homepage button {
         font-size: 2rem;
     }
