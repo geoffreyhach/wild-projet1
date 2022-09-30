@@ -43,8 +43,8 @@ img {
 
 nav {
     grid-area: nav;
-    position: absolute;
-    display: none;
+    position: fixed;
+    display: flex;
     flex-direction: column;
     gap: 2rem;
     padding-top: 5rem;
@@ -56,11 +56,13 @@ nav {
     min-height: 100vh;
     font-size: 2rem;
     border-radius: 25px 0 0 25px;
+    transform: translateX(100%);
+    transition: 300ms transform ease-in-out;
     z-index: 1000;
 }
 
 .active {
-    display: flex;
+    transform: translateX(0);
 }
 
 
