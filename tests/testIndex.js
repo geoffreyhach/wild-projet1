@@ -8,4 +8,4 @@ const optionsHobbie = { filename: "../hobbies.html" };
 w3cHtmlValidator.validate(optionsHobbie).then(w3cHtmlValidator.reporter);
 //Verification Formation
 const optionsFormation = { filename: "../formation.html" };
-w3cHtmlValidator.validate(optionsHobbie).then(w3cHtmlValidator.reporter);
+w3cHtmlValidator.validate(optionsFormation).then(w3cHtmlValidator.reporter);
