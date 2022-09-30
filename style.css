@@ -220,6 +220,10 @@ audio {
 
 .text--experience {
     grid-area: text;
+    max-height: 60vh;
+    overflow: scroll;
+    margin-right: 20px;
+    font-size: 0.8rem;
 }
 
 .ul--experience {
@@ -265,7 +269,7 @@ audio {
     }
 
     .text--experience {
-        min-height: 50vh;
+        min-height: 55vh;
         text-align: justify;
         margin-right: 20px;
         overflow: scroll;
