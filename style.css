@@ -35,7 +35,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 2rem;
+    margin-top: -2rem;
+    margin-bottom: -2rem;
+    padding: 5rem 2rem 5rem 2rem;
 
 }
 .pageAccueil .bouton{
@@ -46,7 +48,7 @@ body {
     height: 8vh;
     color: var(--color-white);
     box-shadow: 10px 10px 5px 0px #222121;
-    border-radius: 20pt 20pt 20pt 20pt;
+    border-radius: 20pt;
 }
 .pageAccueil h3 {
     width: 2fr;
@@ -414,7 +416,9 @@ button.date6 {
         grid-row-gap: 1rem;
         padding: 2rem;
     }
-    
+    .cache{
+        display: none;
+    }
     .pageAccueil h3 {
         grid-area: 1 / 1 / 2 / 3;
         width: 2fr;
