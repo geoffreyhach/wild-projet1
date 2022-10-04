@@ -5,6 +5,13 @@ const toggleButton = document.querySelector(".navbartoggle");
 toggleButton.addEventListener("click", function () {
     navBar.classList.toggle("active");
 });
+// Accueil 
+
+const enterAccueil = document.querySelector(".enter");
+const pageEnter = document.querySelector(".pageAccueil");
+enterAccueil.addEventListener("click", function(){
+    pageEnter.classList.add("cache");
+});
 // Pop'up de Pub
 
 const listePub = ["pub1.png", "Pub3"]
