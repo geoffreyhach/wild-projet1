@@ -36,6 +36,7 @@ body {
     padding: 1rem;
 }
 
+
 img {
     grid-area: img;
     max-width: 100%;
@@ -223,20 +224,64 @@ audio {
     max-height: 60vh;
     overflow: scroll;
     margin-right: 20px;
-    font-size: 0.8rem;
+    font-size: 0.55rem;
+    text-align: justify;
 }
 
 .ul--experience {
     list-style: none;
     grid-area: ulnav;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     background-color: var(--color-primary);
     border-radius: 30px;
     box-shadow: 15px 15px 23px -3px #ff6201;
+    z-index: 999;
+
 }
+
+.ul--experience.active {
+    display: flex;
+}
+
+
+
+.date--experience {
+    top: 200px;
+    right: 10px;
+    position: absolute;
+    color: black;
+}
+
+button.date1,
+button.date2,
+button.date3,
+button.date4,
+button.date5,
+button.date6 {
+    background-color: #ff6201;
+    border-color: #ff6201;
+    backface-visibility: hidden;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    white-space: nowrap;
+    background: rgba(0%, 0%, 0%, 0);
+    border-radius: 100px;
+    border: 2px solid #FFF3CD;
+    border-width: 3px 3px 3px 3px;
+    padding: 3px 10px 2px 10px;
+    color: #FFF3CD;
+    font-size: 12px;
+    font-family: Pretendo;
+    font-weight: 200;
+    font-style: normal;
+    letter-spacing: 1px
+}
+
+
 
 @media screen and (min-width:35em) {
     body {
@@ -272,6 +317,14 @@ audio {
         display: none;
     }
 
+    .date--experience {
+        display: none;
+    }
+
+    .date {
+        display: none;
+    }
+
     .text--experience {
         min-height: 55vh;
         text-align: justify;
@@ -293,5 +346,31 @@ audio {
 
     .main--homepage .quote {
         margin-inline: 1rem;
+    }
+
+    button.date1,
+    button.date2,
+    button.date3,
+    button.date4,
+    button.date5,
+    button.date6 {
+        background-color: #ff6201;
+        border-color: #ff6201;
+        backface-visibility: hidden;
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        white-space: nowrap;
+        background: rgba(0%, 0%, 0%, 0);
+        border-radius: 100px;
+        border: 2px solid #FFF3CD;
+        border-width: 3px 3px 3px 3px;
+        padding: 3px 10px 2px 10px;
+        color: #FFF3CD;
+        font-size: 12px;
+        font-family: Pretendo;
+        font-weight: 200;
+        font-style: normal;
+        letter-spacing: 1px
     }
 }
