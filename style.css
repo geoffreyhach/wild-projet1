@@ -67,8 +67,6 @@ body {
     display: none;
 }
 
-
-
 .card {
     background-color: var(--color-secondary);
     max-width: min(70vw, 900px);
@@ -76,14 +74,15 @@ body {
     overflow: hidden;
 }
 
+
 .card>*:not(:first-child) {
     padding: 1rem;
 }
 
 nav {
     grid-area: nav;
-    position: absolute;
-    display: none;
+    position: fixed;
+    display: flex;
     flex-direction: column;
     gap: 2rem;
     padding-top: 5rem;
@@ -95,13 +94,21 @@ nav {
     min-height: 100vh;
     font-size: 2rem;
     border-radius: 25px 0 0 25px;
+    transform: translateX(100%);
+    transition: 300ms transform ease-in-out;
     z-index: 1000;
 }
 
 .active {
-    display: flex;
+    transform: translateX(0);
 }
 
+.navbartoggle{
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    z-index: 10001;
+}
 
 nav a {
     text-decoration: none;
@@ -118,12 +125,14 @@ nav a {
     z-index: 10001;
 }
 
+
 main {
     grid-area: main;
 }
 
 
-section {
+section{
+
     margin-bottom: 1rem;
 }
 
@@ -137,13 +146,13 @@ section {
     align-items: center;
     text-align: center;
     flex-direction: column;
-    gap : 2rem;
-    padding : 4rem;
+    gap: 2rem;
+    padding: 4rem;
 
 }
 
 .main--homepage p {
-    position:  relative;
+    position: relative;
     font-weight: 200;
     text-align: justify;
     text-indent: 3rem;
@@ -166,16 +175,17 @@ section {
 
 .main--homepage p:before {
     position: absolute;
-    content : '“';
+    content: '“';
     top: 25px;
     font-size: 8rem;
     text-indent: -3rem;
     line-height: 1rem;
     font-weight: 300;
 }
+
 .main--homepage p:after {
     position: absolute;
-    content : '”';
+    content: '”';
     bottom: -40px;
     font-size: 8rem;
     text-indent: 10px;
@@ -185,30 +195,91 @@ section {
 
 .main--homepage button {
     position: relative;
-    font-size: 1rem;
     background-color: var(--color-primary);
-    padding: .8em 1em;
-    border : 5px solid var(--color-white);
     margin-top: 1rem;
     padding: 1rem;
-    text-transform: uppercase;
-    color : var(--color-white);
-    transform: skew(-20deg);
+    font-size: 1rem;
     font-weight: 800;
+    text-transform: uppercase;
     white-space: nowrap;
+    color: var(--color-white);
+    transform: skew(-20deg);
+    border: 5px solid var(--color-white);
     cursor: pointer;
 }
 
 
 .main--homepage button:hover {
     transform: translateY(-5px) skew(-20deg);
-    box-shadow: 0 15px 10px  -10px gray;
+    box-shadow: 0 15px 10px -10px gray;
 }
+
+.modal {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    width : 90vw;
+    background-color: var(--color-primary);
+    border-radius: 25px;
+    border: 10px solid var(--color-secondary);
+    padding: 1rem;
+}
+
+.modal svg {
+    position: absolute;
+    right: 10px;
+    fill: var(--color-secondary);
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap : .3rem;
+    margin-top: 2rem;
+}
+
+.modal form input,
+.modal form textarea {
+    padding: .8rem;
+    border-radius: 25px;
+    border: 5px solid var(--color-secondary);
+    background-color: var(--color-white);
+    color : var(--color-secondary)
+}
+
+.modal input::placeholder,
+.modal textarea::placeholder {
+    color : var(--color-secondary)
+
+}
+
+.modal::backdrop {
+    background : grey;
+    opacity: .8;
+}
+
+.modal button {
+    margin-inline: 2rem;
+}
+
+.sent-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /*Hobbie Page*/
 
 .body--hobbie {
     background-image: linear-gradient(to right top, #f4dc43, #f8c82c, #fbb316, #fe9d02, #ff8500, #f77300, #ef6100, #e64d03, #d33d03, #c02c03, #ac1a02, #990000);
 }
+
 .main--hobbie .card{
     box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 27px 5px rgba(163,108,6,0.4);
 }
@@ -217,7 +288,13 @@ section {
         border-radius: 11px;
         background-color: ;
 }
-audio{
+
+.main--hobbie h2 {
+    border: 10px inset #FF6201;
+    border-radius: 11px;
+}
+
+audio {
     visibility: hidden;
 }
 
@@ -227,19 +304,20 @@ audio{
 
 .body--formationpage {
     background-image: url("assets/fondvintage2.jpg");
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
-.main--formationpage section h2{
+.main--formationpage section h2 {
     padding: 0.5rem;
     text-shadow: var(--color-black) 0.1em 0.1em;
 }
 
 .main--formationpage section p {
-    padding:2px;
+    padding: 2px;
     font-style: italic;
 }
+
 
 /* Yann experience page*/
 
@@ -252,17 +330,71 @@ audio{
         "text ulnav";
 }
 
+.body--experience {
+    background-image: url("assets/fond-experience.jpg");
+}
+
 .text--experience {
     grid-area: text;
+    max-height: 60vh;
+    overflow: scroll;
+    margin-right: 20px;
+    font-size: 0.55rem;
+    text-align: justify;
 }
 
 .ul--experience {
     list-style: none;
     grid-area: ulnav;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-primary);
+    border-radius: 30px;
+    box-shadow: 15px 15px 23px -3px #ff6201;
+    z-index: 999;
+
 }
+
+.ul--experience.active {
+    display: flex;
+}
+
+.date--experience {
+    top: 200px;
+    right: 10px;
+    position: absolute;
+    color: black;
+}
+
+button.date1,
+button.date2,
+button.date3,
+button.date4,
+button.date5,
+button.date6 {
+    background-color: #ff6201;
+    border-color: #ff6201;
+    backface-visibility: hidden;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    white-space: nowrap;
+    background: rgba(0%, 0%, 0%, 0);
+    border-radius: 100px;
+    border: 2px solid #FFF3CD;
+    border-width: 3px 3px 3px 3px;
+    padding: 3px 10px 2px 10px;
+    color: #FFF3CD;
+    font-size: 12px;
+    font-family: Pretendo;
+    font-weight: 200;
+    font-style: normal;
+    letter-spacing: 1px
+}
+
+
 
 @media screen and (min-width:35em) {
     body {
@@ -303,8 +435,8 @@ audio{
     .card {
         display: grid;
         grid-template-columns: 2fr 3fr;
-        grid-template-rows:300px 1fr;
-        grid-template-areas: 
+        grid-template-rows: 300px 1fr;
+        grid-template-areas:
             "img main"
             "nav main";
         min-height: 60vh;
@@ -329,18 +461,99 @@ audio{
         display: none;
     }
 
+    .date--experience {
+        display: none;
+    }
+
+    .date {
+        display: none;
+    }
+
     .text--experience {
-        min-height: 80vh;
+        min-height: 55vh;
+        text-align: justify;
+        margin-right: 20px;
+        overflow: scroll;
+        max-height: 5vh;
+
     }
 
     .ul--experience {
-        min-height: 80vh;
+        min-height: 55vh;
+    }
+
     .main--homepage button {
-        font-size: 2rem;
+        font-size: clamp(1rem, 2vw, 2rem);
     }
 
     .main--homepage .quote {
         margin-inline: 1rem;
     }
-    
+   
+    button.date1,
+    button.date2,
+    button.date3,
+    button.date4,
+    button.date5,
+    button.date6 {
+        background-color: #ff6201;
+        border-color: #ff6201;
+        backface-visibility: hidden;
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        white-space: nowrap;
+        background: rgba(0%, 0%, 0%, 0);
+        border-radius: 100px;
+        border: 2px solid #FFF3CD;
+        border-width: 3px 3px 3px 3px;
+        padding: 3px 10px 2px 10px;
+        color: #FFF3CD;
+        font-size: 12px;
+        font-family: Pretendo;
+        font-weight: 200;
+        font-style: normal;
+        letter-spacing: 1px
+    }
+
+    .modal {
+        width: 40vw;
+        height: 45vw;
+    }
+
+    /* Formation Page */
+
+/* Placement Main page Formation*/
+
+.main--formationpage{
+    padding-top: 125px !important;
 }
+
+    /*scroll bar*/
+
+.main--formationpage {
+    width: auto;
+    max-height: 50vh;
+    overflow-y: scroll;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #ff6201 #f3b720;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #f3b720;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ff6201;
+    border-radius: 25px;
+    border: 12px solid #ff6201;
+  }
