@@ -5,3 +5,4 @@ const toggleButton = document.querySelector(".navbartoggle");
 toggleButton.addEventListener("click", function () {
     navBar.classList.toggle("active");
 });
+
