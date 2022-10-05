@@ -73,6 +73,7 @@ body {
 
 .card {
     background-color: var(--color-secondary);
+    box-shadow: -9px 10px 20px 3px rgba(165,141,101,0.5)
     max-width: min(70vw, 900px);
     border-radius: 25px;
     overflow: hidden;
@@ -457,7 +458,10 @@ button.date6 {
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
 }
-
+.coockie button{
+   background-color:  inherit;
+   border: 0;
+}
 
 @media screen and (min-width:35em) {
     body {

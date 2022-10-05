@@ -54,9 +54,9 @@ function Marketing(url, title, size) {
     this.size = size;
 };
 
-const listePub = [
-    new Marketing("pub1.png", "Codesand'wich", "width=800px,height=250px"),
-];
+const pub1 = new Marketing("pub1.png", "Codesand'wich", "width=800px,height=250px");
+const pub2 = new Marketing("pub2.png", "Istanbul", "width=650px,height=350px");
+const listePub = [pub1, pub2];
 console.log(listePub);
 //Preparation des pub aléatoire
 //const indexAl = Math.floor(Math.random() * (2 - 0 +1)) + 0;
