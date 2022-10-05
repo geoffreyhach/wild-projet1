@@ -1,6 +1,21 @@
 //quotes API
 const endPoint =
-    "https://trazip-oss-117-quotes-api.herokuapp.com/api/v1/quotes/random";
+    " https://api.oss117quotes.xyz/v1/author/hubert/2";
+
+const getQuote= async () => {
+    let res = await fetch(endPoint);
+    let quote = await res.json();
+    displayQuote(quote[0].sentence);
+}
+
+const displayQuote = (quote) => {
+    const quoteDiv = document.querySelector('.quote-para')
+    quoteDiv.innerHTML = quote;
+    
+}
+
+getQuote();
+
 
 //modal email
 const openBtn = document.querySelector(".cta-btn");
