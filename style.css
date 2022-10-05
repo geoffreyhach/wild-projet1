@@ -195,6 +195,7 @@ section{
     position: absolute;
     right: 10px;
     fill: var(--color-secondary);
+    cursor: pointer;
 }
 
 .modal form {

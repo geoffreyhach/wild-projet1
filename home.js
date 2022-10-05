@@ -1,3 +1,7 @@
+//quotes API
+const endPoint =
+    "https://trazip-oss-117-quotes-api.herokuapp.com/api/v1/quotes/random";
+
 //modal email
 const openBtn = document.querySelector(".cta-btn");
 const dialog = document.querySelector("dialog");
