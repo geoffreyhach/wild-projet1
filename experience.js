@@ -19,32 +19,26 @@ const textDate = [
 
 btn1.addEventListener("click", () => {
     textEmplacement.innerHTML = textDate[0];
-    navDate.classList.toggle("active");
 });
 
 btn2.addEventListener("click", () => {
     textEmplacement.innerHTML = textDate[1];
-    navDate.classList.toggle("active");
 });
 
 btn3.addEventListener("click", () => {
     textEmplacement.innerHTML = textDate[2];
-    navDate.classList.toggle("active");
 });
 
 btn4.addEventListener("click", () => {
     textEmplacement.innerHTML = textDate[3];
-    navDate.classList.toggle("active");
 });
 
 btn5.addEventListener("click", () => {
     textEmplacement.innerHTML = textDate[4];
-    navDate.classList.toggle("active");
 });
 
 btn6.addEventListener("click", () => {
     textEmplacement.innerHTML = textDate[5];
-    navDate.classList.toggle("active");
 });
 
 //toggle mobile
