@@ -309,7 +309,14 @@ audio {
     background-size: cover;
 }
 
-.main--formationpage section h2 {
+.main--formationpage {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.main--formationpage section h2{
     padding: 0.5rem;
     text-shadow: var(--color-black) 0.1em 0.1em;
 }
@@ -528,8 +535,9 @@ button.date6 {
 
 /* Placement Main page Formation*/
 
-.main--formationpage{
-    padding-top: 125px !important;
+/*.main--formationpage{
+    padding-top: 75px !important;
+    padding-bottom: 75px !important;
 }
 
     /*scroll bar*/
