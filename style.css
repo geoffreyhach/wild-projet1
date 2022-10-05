@@ -3,7 +3,7 @@
 :root {
     --color-primary: #FF6201;
     --color-secondary: #F3B700;
-    --color-white: #FFF3CD;
+    --color-white: #DFE0DF;
     --color-black: #241B00;
 }
 
@@ -73,12 +73,11 @@ body {
 
 .card {
     background-color: var(--color-secondary);
-    box-shadow: -9px 10px 20px 3px rgba(165,141,101,0.5)
+    box-shadow: -9px 10px 20px 3px rgba(165,141,101,0.5);
     max-width: min(70vw, 900px);
     border-radius: 25px;
     overflow: hidden;
 }
-
 
 .card>*:not(:first-child) {
     padding: 1rem;
@@ -119,7 +118,6 @@ nav a {
     text-decoration: none;
     color: var(--color-white);
     font-family: 'Roboto', sans-serif;
-
     font-weight: 800;
 }
 
@@ -130,14 +128,11 @@ nav a {
     z-index: 10001;
 }
 
-
 main {
     grid-area: main;
 }
 
-
 section {
-
     margin-bottom: 1rem;
 }
 
@@ -291,10 +286,13 @@ section {
     border: 10px inset #FF6201;
     border-radius: 11px;
 }
-
+.main--hobbie p{
+    padding-top: 0.5rem;
+}
 audio {
     visibility: hidden;
 }
+
 
 /* ================
     FORMATION PAGE
@@ -328,7 +326,6 @@ audio {
         "text ulnav"
         "text ulnav";
 }
-
 
 .text--experience {
     grid-area: text;
