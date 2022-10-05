@@ -14,7 +14,8 @@
 }
 
 body {
-    background-color: var(--color-primary);
+    background-image: radial-gradient(circle, #f4dc43, #f9c122, #fda400, #ff8500, #ff6201);
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 27px 5px rgba(163,108,6,0.4);
     min-height: 100vh;
     max-width: 100vw;
     display: flex;
@@ -23,6 +24,45 @@ body {
     padding-bottom: 2rem;
     color: var(--color-white);
     font-family: 'Roboto', sans-serif;
+}
+/* Affichage d'accueil*/
+.pageAccueil{
+    background-image: radial-gradient(circle, #f4dc43, #f9c122, #fda400, #ff8500, #ff6201);
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: -2rem;
+    margin-bottom: -2rem;
+    padding: 5rem 2rem 5rem 2rem;
+
+}
+.pageAccueil .bouton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 1fr;
+    height: 8vh;
+    color: var(--color-white);
+    box-shadow: 10px 10px 5px 0px #222121;
+    border-radius: 20pt;
+    text-decoration: none;
+}
+.pageAccueil h3 {
+    width: 2fr;
+    height: 10vh;
+    background-color: #F3B700;
+}
+.pageAccueil .enter {
+    background-color: #7D8500;
+}
+.pageAccueil a {
+    background-color: #C4515C;
+}
+.pageAccueil img{
+    display: none;
 }
 
 .card {
@@ -35,12 +75,6 @@ body {
 
 .card>*:not(:first-child) {
     padding: 1rem;
-}
-
-
-img {
-    grid-area: img;
-    max-width: 100%;
 }
 
 nav {
@@ -196,6 +230,7 @@ section {
     position: absolute;
     right: 10px;
     fill: var(--color-secondary);
+    cursor: pointer;
 }
 
 .modal form {
@@ -237,18 +272,17 @@ section {
     align-items: center;
 }
 
-
-
 /*Hobbie Page*/
 
-.body--hobbie {
-    background-image: linear-gradient(to right top, #f4dc43, #f8c82c, #fbb316, #fe9d02, #ff8500, #f77300, #ef6100, #e64d03, #d33d03, #c02c03, #ac1a02, #990000);
+.main--hobbie h2{
+        border: 10px inset #FF6201;
+        border-radius: 11px;
+        background-color: ;
 }
 
 .main--hobbie h2 {
     border: 10px inset #FF6201;
     border-radius: 11px;
-
 }
 
 audio {
@@ -259,13 +293,14 @@ audio {
     FORMATION PAGE
 ================= */
 
-.body--formationpage {
-    background-image: url("assets/fondvintage2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+.main--formationpage {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
-.main--formationpage section h2 {
+.main--formationpage section h2{
     padding: 0.5rem;
     text-shadow: var(--color-black) 0.1em 0.1em;
 }
@@ -287,9 +322,6 @@ audio {
         "text ulnav";
 }
 
-.body--experience {
-    background-image: url("assets/fond-experience.jpg");
-}
 
 .text--experience {
     grid-area: text;
@@ -317,8 +349,6 @@ audio {
 .ul--experience.active {
     display: flex;
 }
-
-
 
 .date--experience {
     top: 200px;
@@ -422,7 +452,36 @@ button.date6 {
     body {
         align-items: center;
     }
+    .pageAccueil{
+        min-height: 100vh;
+        min-width: 100vw;
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        padding: 2rem;
+    }
 
+    .pageAccueil h3 {
+        grid-area: 1 / 1 / 2 / 3;
+        width: 2fr;
+        height: 10vh;
+    }
+    .pageAccueil .enter {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .pageAccueil a {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    .pageAccueil img{
+        display: flex;
+        grid-area: 2 / 2 / 7 / 3;
+        max-width: 1fr;
+        max-height: 70vh;
+    }
     .card {
         display: grid;
         grid-template-columns: 2fr 3fr;
@@ -479,8 +538,7 @@ button.date6 {
     .main--homepage .quote {
         margin-inline: 1rem;
     }
-
-
+   
     button.date1,
     button.date2,
     button.date3,
@@ -543,9 +601,11 @@ button.date6 {
         background: #f3b720;
     }
 
-    *::-webkit-scrollbar-thumb {
-        background-color: #ff6201;
-        border-radius: 25px;
-        border: 12px solid #ff6201;
-    }
-}
+  *::-webkit-scrollbar-thumb {
+    background-color: #ff6201;
+    border-radius: 25px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #FFF3CD;
+  }

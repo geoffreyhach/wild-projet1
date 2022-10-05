@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hubert Bonisseur de la Bath</title>
+
+</head>
+    
+<body>
+    <svg class="navbartoggle" width="32" height="32" viewBox="0 0 48 48">
+        <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+            <path d="M7.94971 11.9497H39.9497" />
+            <path d="M7.94971 23.9497H39.9497" />
+            <path d="M7.94971 35.9497H39.9497" />
+        </g>
+    </svg>
+    
+    <div class="card">
+        <img src="assets/hubertimg.jpg" alt="hubert">
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="experience.html">Experience</a>
+            <a href="formation.html">Formation</a>
+            <a href="hobbies.html">Hobbies</a>
+        </nav>
+            <main class="main--homepage">
+                <div class="quote">
+                    <p>
+                        Avec moi, les histoires d’amour ne s’écrivent pas dans le temps, ce sont des histoires courtes, compactes, passionnelles. Je ne peux pas vivre autrement Dolorès. D’aucuns ont des aventures… Je suis une aventure.",
+                    </p>
+                    <span>-- Hubert Bonisseur de la Bath</span>
+                </div>
+                <div>
+                    <h2>On s'envoie un courriel? </h2>
+                    <button class="cta-btn">Faisons comme ça</button>
+                </div>
+
+                <dialog class="modal">
+                    <svg class="close-btn" width="32" height="32" viewBox="0 0 32 32"><path  d="M16 2C8.2 2 2 8.2 2 16s6.2 14 14 14s14-6.2 14-14S23.8 2 16 2zm0 26C9.4 28 4 22.6 4 16S9.4 4 16 4s12 5.4 12 12s-5.4 12-12 12z"/><path d="M21.4 23L16 17.6L10.6 23L9 21.4l5.4-5.4L9 10.6L10.6 9l5.4 5.4L21.4 9l1.6 1.6l-5.4 5.4l5.4 5.4z"/></svg>
+                    <form action="submit">
+                        <label for="email"></label>
+                        <input type="text" name="email" placeholder="Votre email" id="">
+                        <label for="subject"></label>
+                        <input type="text" name="subject" placeholder="Sujet" id="">
+                        <label for="message"></label>
+                        <textarea type="text"  rows="10" name="message" placeholder="Votre message ... "id=""></textarea>
+                        <button type="submit" id="send-email">Envoyer</button>
+                    </form>
+                </dialog>
+
+
+        </main>
+
+
+    </div>
+    <script src="home.js"></script>
+    <script src="app.js"></script>
+</body>
+</body>
+
+</html>
