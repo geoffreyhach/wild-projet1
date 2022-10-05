@@ -31,6 +31,7 @@ body {
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
+    flex-direction: column;
     gap: 2rem;
     margin-top: -2rem;
     margin-bottom: -2rem;
@@ -100,7 +101,7 @@ nav {
     transform: translateX(0);
 }
 
-.navbartoggle{
+.navbartoggle {
     top: 10px;
     right: 10px;
     position: absolute;
@@ -128,7 +129,7 @@ main {
 }
 
 
-section{
+section {
 
     margin-bottom: 1rem;
 }
@@ -218,7 +219,7 @@ section{
     justify-content: center;
     align-items: center;
     height: 75vh;
-    width : 90vw;
+    width: 90vw;
     background-color: var(--color-primary);
     border-radius: 25px;
     border: 10px solid var(--color-secondary);
@@ -235,7 +236,7 @@ section{
 .modal form {
     display: flex;
     flex-direction: column;
-    gap : .3rem;
+    gap: .3rem;
     margin-top: 2rem;
 }
 
@@ -245,17 +246,16 @@ section{
     border-radius: 25px;
     border: 5px solid var(--color-secondary);
     background-color: var(--color-white);
-    color : var(--color-secondary)
+    color: var(--color-secondary)
 }
 
 .modal input::placeholder,
 .modal textarea::placeholder {
-    color : var(--color-secondary)
-
+    color: var(--color-secondary)
 }
 
 .modal::backdrop {
-    background : grey;
+    background: grey;
     opacity: .8;
 }
 
@@ -383,6 +383,69 @@ button.date6 {
     letter-spacing: 1px
 }
 
+.coockie {
+    position: absolute;
+    min-width: min(80%, 500px);
+    min-height: 60%;
+    background-color: #55433B;
+    z-index: 50000;
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "img img"
+        "img img"
+        "txt txt"
+        "btn btn";
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    box-shadow: 0px 0px 50px 35px #55433B;
+}
+
+.coockie-text {
+    text-align: center;
+    grid-area: txt;
+    font-size: 0.7em;
+}
+
+.img--coockie {
+    grid-area: img;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+
+}
+
+
+.btn-general {
+    grid-area: btn;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.btn1--coockie {
+    background-color: #C4515C;
+    width: 130px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.btn2--coockie {
+    background-color: #7D8500;
+    width: 130px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
 
 
 @media screen and (min-width:35em) {
@@ -423,8 +486,7 @@ button.date6 {
         display: grid;
         grid-template-columns: 2fr 3fr;
         grid-template-rows: 300px 1fr;
-        grid-template-areas:
-            "img main"
+        grid-template-areas: "img main"
             "nav main";
         min-height: 60vh;
     }
@@ -510,35 +572,34 @@ button.date6 {
 
     /* Formation Page */
 
-/* Placement Main page Formation*/
+    /* Placement Main page Formation*/
 
-/*.main--formationpage{
-    padding-top: 75px !important;
-    padding-bottom: 75px !important;
-}
+    .main--formationpage {
+        padding-top: 125px !important;
+    }
 
     /*scroll bar*/
 
-.main--formationpage {
-    width: 50vh;
-    max-height: 50vh;
-    overflow-y: scroll;
-  }
+    .main--formationpage {
+        width: auto;
+        max-height: 50vh;
+        overflow-y: scroll;
+    }
 
-  /* Firefox */
-  * {
-    scrollbar-width: auto;
-    scrollbar-color: #ff6201 #f3b720;
-  }
+    /* Firefox */
+    * {
+        scrollbar-width: auto;
+        scrollbar-color: #ff6201 #f3b720;
+    }
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 12px;
-  }
+    /* Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 12px;
+    }
 
-  *::-webkit-scrollbar-track {
-    background: #f3b720;
-  }
+    *::-webkit-scrollbar-track {
+        background: #f3b720;
+    }
 
   *::-webkit-scrollbar-thumb {
     background-color: #ff6201;

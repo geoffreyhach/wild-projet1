@@ -66,3 +66,13 @@ console.log(listePub);
        console.log('La page est complètement chargée');
        window.open(listePub[0].url, listePub[0].title, pulistePub[0].size);
   };
+
+//coockie
+
+const buttonOk = document.querySelector(".btn-ok");
+
+buttonOk.addEventListener("click", function () {
+    console.log("test");
+});
+
+console.log(buttonOk);
