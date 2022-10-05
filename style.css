@@ -14,7 +14,8 @@
 }
 
 body {
-    background-color: var(--color-primary);
+    background-image: radial-gradient(circle, #f4dc43, #f9c122, #fda400, #ff8500, #ff6201);
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 27px 5px rgba(163,108,6,0.4);
     min-height: 100vh;
     max-width: 100vw;
     display: flex;
@@ -26,14 +27,10 @@ body {
 }
 /* Affichage d'accueil*/
 .pageAccueil{
+    background-image: radial-gradient(circle, #f4dc43, #f9c122, #fda400, #ff8500, #ff6201);
     min-height: 100vh;
     min-width: 100vw;
-    background-color: #FF6201;
-    color: #FAE7E3;
-    z-index: 20000;
-    font-family: 'Roboto', sans-serif;
     display: flex;
-    flex-direction: column;
     gap: 2rem;
     margin-top: -2rem;
     margin-bottom: -2rem;
@@ -277,13 +274,6 @@ section{
 
 /*Hobbie Page*/
 
-.body--hobbie {
-    background-image: linear-gradient(to right top, #f4dc43, #f8c82c, #fbb316, #fe9d02, #ff8500, #f77300, #ef6100, #e64d03, #d33d03, #c02c03, #ac1a02, #990000);
-}
-
-.main--hobbie .card{
-    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 27px 5px rgba(163,108,6,0.4);
-}
 .main--hobbie h2{
         border: 10px inset #FF6201;
         border-radius: 11px;
@@ -302,12 +292,6 @@ audio {
 /* ================
     FORMATION PAGE
 ================= */
-
-.body--formationpage {
-    background-image: url("assets/fondvintage2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 .main--formationpage {
     position: relative;
@@ -338,9 +322,6 @@ audio {
         "text ulnav";
 }
 
-.body--experience {
-    background-image: url("assets/fond-experience.jpg");
-}
 
 .text--experience {
     grid-area: text;
@@ -411,10 +392,8 @@ button.date6 {
     .pageAccueil{
         min-height: 100vh;
         min-width: 100vw;
-        background-color: #FF6201;
+        background-color: var(--color-primary);
         color: var(--color-white);
-        z-index: 20000;
-        font-family: 'Roboto', sans-serif;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(6, 1fr);
@@ -422,9 +401,7 @@ button.date6 {
         grid-row-gap: 1rem;
         padding: 2rem;
     }
-    .cache{
-        display: none;
-    }
+
     .pageAccueil h3 {
         grid-area: 1 / 1 / 2 / 3;
         width: 2fr;
