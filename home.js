@@ -2,7 +2,7 @@
 const endPoint =
     " https://api.oss117quotes.xyz/v1/author/hubert/2";
 
-const getQuote= async () => {
+const getQuote = async () => {
     let res = await fetch(endPoint);
     let quote = await res.json();
     displayQuote(quote[0].sentence);
@@ -11,7 +11,7 @@ const getQuote= async () => {
 const displayQuote = (quote) => {
     const quoteDiv = document.querySelector('.quote-para')
     quoteDiv.innerHTML = quote;
-    
+
 }
 
 getQuote();
@@ -48,7 +48,7 @@ closeBtn.addEventListener("click", () => {
 });
 // Pop'up de Pub
 
-function Marketing(url, title, size){
+function Marketing(url, title, size) {
     this.url = url;
     this.title = title;
     this.size = size;
@@ -62,17 +62,8 @@ console.log(listePub);
 //const indexAl = Math.floor(Math.random() * (2 - 0 +1)) + 0;
 //console.log(indexAl);
 
-   window.onload = (event) => {
-       console.log('La page est complètement chargée');
-       window.open(listePub[0].url, listePub[0].title, pulistePub[0].size);
-  };
+window.onload = (event) => {
+    console.log('La page est complètement chargée');
+    window.open(listePub[0].url, listePub[0].title, pulistePub[0].size);
+};
 
-//coockie
-
-const buttonOk = document.querySelector(".btn-ok");
-
-buttonOk.addEventListener("click", function () {
-    console.log("test");
-});
-
-console.log(buttonOk);
