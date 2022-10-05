@@ -27,3 +27,14 @@ const closeBtn = document.querySelector(".close-btn");
 closeBtn.addEventListener("click", () => {
     dialog.close();
 });
+
+
+//coockie
+
+const buttonOk = document.querySelector(".btn-ok");
+
+buttonOk.addEventListener("click", function () {
+    console.log("test");
+});
+
+console.log(buttonOk);

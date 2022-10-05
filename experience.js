@@ -1,6 +1,6 @@
 //nav experience
 
-const btn = document.querySelector(".date1");
+const btn1 = document.querySelector(".date1");
 const btn2 = document.querySelector(".date2");
 const btn3 = document.querySelector(".date3");
 const btn4 = document.querySelector(".date4");
@@ -17,7 +17,7 @@ const textDate = [
     ["<h1>TEXT DATE 6<h1><p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam repellat minus laudantium ducimus consectetur sit corporis maiores fugiat. Tenetur, facilis!</p> "]
 ];
 
-btn.addEventListener("click", () => {
+btn1.addEventListener("click", () => {
     textEmplacement.innerHTML = textDate[0];
     navDate.classList.toggle("active");
 });
@@ -55,4 +55,6 @@ const defilButton = document.querySelector(".date--experience");
 defilButton.addEventListener("click", function () {
     navDate.classList.toggle("active");
 });
+
+
 
