@@ -55,15 +55,18 @@ function Marketing(url, title, size) {
 };
 
 const pub1 = new Marketing("pub1.png", "Codesand'wich", "width=800px,height=250px");
-const pub2 = new Marketing("pub2.png", "Istanbul", "width=650px,height=350px");
-const listePub = [pub1, pub2];
-console.log(listePub);
-//Preparation des pub aléatoire
-//const indexAl = Math.floor(Math.random() * (2 - 0 +1)) + 0;
-//console.log(indexAl);
+const pub2 = new Marketing("pub2.png", "Istanbul", "width=700px,height=400px");
+const pub3 = new Marketing("pub3.jpg", "Mal de Crâne", "width=600px,height=900px");
+const pub4 = new Marketing("pub4.png", "Moi,j'suis dans le poulet",  "width=800px,height=250px");
+const pub5 = new Marketing("pub5.png", "DEVENIR RICHE", "width=800px,height=250px");
 
+const listePub = [pub1, pub2, pub3, pub4, pub5];
+
+//Preparation des pub aléatoire
+const index = Math.floor(Math.random() * (4 - 0 +1)) + 0;
+console.log(index);
 window.onload = (event) => {
     console.log('La page est complètement chargée');
-    window.open(listePub[0].url, listePub[0].title, pulistePub[0].size);
+    window.open(listePub[index].url, listePub[index].title, listePub[index].size);
 };
 
