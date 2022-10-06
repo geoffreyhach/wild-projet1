@@ -1,4 +1,4 @@
-//coockie
+//cookie
 
 const buttoncOk = document.querySelector(".btn-ok");
 
