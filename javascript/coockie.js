@@ -3,7 +3,7 @@
 const buttoncOk = document.querySelector(".btn-ok");
 
 buttoncOk.addEventListener("click", () => {
-    window.open("cookie.gif", "Cookie", "width=650px,height=250px");
+    window.open("cookie1.gif", "Cookie", "width=650px,height=250px");
 });
 
 const buttonPasOk = document.querySelector(".btn-pas-ok");
