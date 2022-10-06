@@ -78,7 +78,7 @@ body p, h1, h2, h3, h4{
 
 .card {
     background-color: var(--color-secondary);
-    box-shadow: -9px 10px 20px 3px rgba(165,141,101,0.5);
+    box-shadow: -9px 10px 20px 3px rgba(165, 141, 101, 0.5);
     max-width: min(70vw, 900px);
     border-radius: 25px;
     overflow: hidden;
@@ -294,9 +294,11 @@ section {
     border: 10px inset #FF6201;
     border-radius: 11px;
 }
-.main--hobbie p{
+
+.main--hobbie p {
     padding-top: 0.5rem;
 }
+
 audio {
     padding: 0.5rem;
     max-width: 90%;
@@ -334,6 +336,15 @@ audio::-webkit-media-controls-panel {
     grid-template-columns: 6fr 1fr;
     grid-template-rows: 200px;
     grid-template-areas:
+        "text text"
+        "text text";
+}
+
+.main--experience.active {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    grid-template-rows: 200px;
+    grid-template-areas:
         "text ulnav"
         "text ulnav";
 }
@@ -341,18 +352,14 @@ audio::-webkit-media-controls-panel {
 .text--experience {
     grid-area: text;
     max-height: 60vh;
-
-    margin-right: 20px;
     font-size: 0.55rem;
-    text-align: justify;
+
 }
 
 .ul--experience {
     list-style: none;
     grid-area: ulnav;
     display: none;
-    flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     background-color: var(--color-primary);
     border-radius: 30px;
@@ -362,7 +369,10 @@ audio::-webkit-media-controls-panel {
 }
 
 .ul--experience.active {
-    display: flex;
+    display: grid;
+    justify-content: center;
+    margin-left: 15px;
+
 }
 
 .coockie.active {
@@ -371,10 +381,10 @@ audio::-webkit-media-controls-panel {
 
 
 .date--experience {
-    top: 200px;
-    right: 10px;
-    position: absolute;
     color: black;
+    position: absolute;
+    top: 260px;
+    right: 10px;
 }
 
 button.date1,
@@ -466,6 +476,7 @@ button.date6 {
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
 }
+
 .coockie button{
    background-color:  inherit;
    border: 0;
@@ -559,6 +570,9 @@ button.date6 {
     .ul--experience {
         min-height: 55vh;
         display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
     }
 
     .main--homepage button {
