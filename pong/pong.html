@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pong.css">
+    <title>Document</title>
+</head>
+<header><svg class="navbartoggle" width="32" height="32" viewBox="0 0 48 48"><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path d="M7.94971 11.9497H39.9497"/><path d="M7.94971 23.9497H39.9497"/><path d="M7.94971 35.9497H39.9497"/></g></svg>
+  <div class="card">
+      <nav class="nav--formationpage">
+          <a href="../page/home.html">Home</a>
+          <a href="../page/experience.html">Experience</a>
+          <a href="../page/formation.html">Formation</a>
+          <a href="../page/hobbies.html">Hobbies</a>
+          <a href="../pong/pong.html">Petit jeu</a>
+      </nav></header>
+<body>
+    <div id="wrap">
+        <div id="startMenu">
+          <h1>Pong</h1>
+          <button id="startBtn">Start</button>
+        </div>
+        <div id="pauseMenu">
+          <h1>Pause</h1>
+          <button id="continueBtn">Continue</button>
+          <button id="restartBtn">Restart</button>
+        </div>
+        <div id="gameOverMenu">
+          <h1 id="gameMessage"></h1>
+          <button id="againBtn">Try again</button>
+        </div>
+        <div id="gameplay">
+          <canvas id="gameCanvas" width="800" height="600"></canvas>
+        </div>
+      </div>
+</body>
+<script src="pong.js"></script>
+</html>
