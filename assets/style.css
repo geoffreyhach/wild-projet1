@@ -331,8 +331,8 @@ audio::-webkit-media-controls-panel {
     grid-template-columns: 6fr 1fr;
     grid-template-rows: 200px;
     grid-template-areas:
-        "text text"
-        "text text";
+        "text ulnav"
+        "text ulnav";
 }
 
 .main--experience.active {
