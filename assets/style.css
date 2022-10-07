@@ -315,7 +315,6 @@ audio::-webkit-media-controls-panel {
 
 .main--formationpage section h2 {
     padding: 0.5rem;
-    text-shadow: var(--color-black) 0.1em 0.1em;
 }
 
 .main--formationpage section p {
